@@ -66,7 +66,7 @@ gitalk:
   clientSecret: 8c265c17aecc24da5f1a1210de1317b7c21e00ab    #生成的clientSecret
   repo: yiyiwann.github.io    #仓库名称
   owner: yiyiwann    #github用户名
-  admin: yiyiwann
+  admin: ['yiyiwann']
   distractionFreeMode: true #是否启用类似FB的阴影遮罩
 
 
