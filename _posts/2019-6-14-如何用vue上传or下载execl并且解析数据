@@ -11,6 +11,7 @@ tags:
     - 前端
 ---
 
+
 ## 前言
 
 目前的项目需要用浏览器下载excel模板，并且把数据填入excel中后上传给浏览器，前端通过该excel解析出它的数据并将其作为参数通过api传给后台。
@@ -98,7 +99,7 @@ uplodData: function () {
           reader.readAsBinaryString(file[0])
           reader.onload = function (e) {
             console.log(e)
-            try {
+            try { 
               console.log('转换')
               var data = e.target.result
               var workbook = XLSX.read(data, { type: 'binary' })
@@ -122,4 +123,5 @@ uplodData: function () {
  2、用if条件，在浏览器的输入框中没有填上数据时不触发addEventListener的change，但是发现else里的内容发生了，if里的也发生了。
  该问题就是我进入思维死角钻牛角尖了。根据客户需求，不会在传文件后立刻调用api，而是在确定输入框中填入的数据正确、文件上传正确时才会按下按钮调用api
  
- 可以设置另一个按钮，在另一个函数判断有无写入参数，并将excel里的数据也传入该函数。然后在这个按钮里调用api
+ 可以设置另一个按钮，在另一个函数判断有无写入参数，并将excel里的数据也传入该函数。然后在这个按钮里调用api.
+ 
